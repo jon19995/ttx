@@ -1,0 +1,46 @@
+.header {
+}
+.header__container {
+  max-width: 1110px;
+  width: 100%;
+  padding: 0px 15px;
+  margin: 0px auto;
+  min-height: 40px;
+  border: 1px solid red;
+}
+.header__top {
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  align-items: flex-start;
+}
+.logo__img {
+}
+.logo__text {
+  margin-left: 25px;
+  font-size: 66px;
+}
+.header_nav {
+}
+.header__nav-list {
+  display: flex;
+}
+.header__content {
+}
+.header__text {
+}
+.header__list {
+}
+.header__list-item {
+}
+.header__span {
+}
+.header__form {
+}
+.sign-up {
+}
+.st-btn {
+}

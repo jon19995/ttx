@@ -1,39 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="style.css" rel="stylesheet" crossorigin="anonymous">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <div class="container pl-2 pr-2">
-        <header class="header">
-            <div class="logo_derscr">
-                <img src="https://picsum.photos/40/40" />
-                <h1 class="title">Тета-Хилинг</h1>
-            </div>
-            <nav class="nav">
-                <a class="nav-link" href="#">Тетта хиллинг</a>
-                <a class="nav-link" href="#">Медитации</a>
-                <a class="nav-link" href="#">Контакты</a>
-            </nav>
-        </header>
-        <article class="reborn">
-            <h2 class="title">Обнови и Перезагрузи свою жизнь №2</h2>
-            <h3>Групповая работа с приминением метода Тета Хилинг поможет тебе:</h3>
-            <ul>
-                <li>Перезагрузить и прокачать своё мышление</li>
-                <li>Выйти на новый уровень качества жизни, отношений, любви, дохода, яркости жизни, ...</li>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__top">
+          <div class="logo">
+            <img src="https://picsum.photos/100/100" alt="" class="logo__img" />
+            <h1 class="logo__text">Тета-Хилинг</h1>
+          </div>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li>ТЕТА ХИЛИНГ</li>
+              <li>Медитация</li>
+              <li>Контакты</li>
             </ul>
-            <p>Групповая проработка мышления с помощью Тета Хилинг -лучшее  решение и лучшее вложение в себя, свое будущее, и будущее своих детей.</p>
-
-            <p>Записаться на безоплатную диагностику</p>
-            <button>Записаться</button>
-        </article>
-    </div>
-</body>
+          </nav>
+        </div>
+        <div class="header__content">
+          <h3 class="header__text">Обнови и Перезагрузи свою жизнь</h3>
+          <ul class="header__list">
+            <li class="header__list-item"></li>
+            <li class="header__list-item"></li>
+            <li class="header__list-item"></li>
+            <li class="header__list-item"></li>
+          </ul>
+          <span class="header__span">Записатьсся нзоплатную диагностику</span>
+          <form class="header__form" action="#">
+            <button class="sign-up st-btn"></button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <!-- <main class="wrapper">
+      <section class="if-you">
+        <div class="if-you__text">
+          <h3 class="if-you__text-top">Групповая проработка для тебя,</h3>
+          <span class="if-you__text-bottom">ЕСЛИ ТЫ:</span>
+        </div>
+        <ul class="if-you__list">
+          <li class="if-you__list-item">
+            Хочешь избавиться навсегда от негативных установок, которые
+            препятствуют развитию и реализации
+          </li>
+          <li class="if-you__list-item">
+            Хочешь тот самый КВАНТОВЫЙ СКАЧЕК в своей жизни
+          </li>
+          <li class="if-you__list-item">
+            Хочешь попасть в энергетические потоки молниеностного исполнения
+            самых сокровенных желаний
+          </li>
+          <li class="if-you__list-item">
+            Хочешь перестать откладвать на ПОТОМ свою жизнь, сказать НЕТ
+            прокрастинации
+          </li>
+          <li class="if-you__list-item">
+            Хочешь достичь амбициозных целей в любых сферах жизни. Лего получать
+            желаемый резульат через работу с мышлением.
+          </li>
+          <li class="if-you__list-item">
+            Хочешь начать жить СВОЮ полноценную жизнь, без необходимости
+            оглядваться на других, их мнения
+          </li>
+          <li class="if-you__list-item">
+            Хочешь получить свободу жизни и легкость дыхания
+          </li>
+          <li class="if-you__list-item">
+            хочешь обладать дополнительным инструментом, для работы с клиентами
+          </li>
+          <li class="if-you__list-item">
+            Хочешь уйти из найма и зарабатывать на онлайн-консультациях, помогая
+            другим сделать из жизнь лучше, ярче, счастливее...
+          </li>
+        </ul>
+        <form class="if-you__form" action="#">
+          <button class="if-you__btn">ДА, Я ХОЧУ</button>
+          <button class="if-you__btn">Выбрать тариф</button>
+        </form>
+        <h3 class="you-result">Твой результат:</h3>
+        <ul class="you-results">
+          <li class="you-results__item">Наладишь свою личную жизнь</li>
+          <li class="you-results__item">
+            Ты научишся соеденятся с энергетическим потоком
+          </li>
+          <li class="you-results__item">
+            Ты ощутишь и увидишь квантовый скачек в своей жизни
+          </li>
+          <li class="you-results__item">
+            Ты будешь уметь управлять своей жизнью, используя знания, которые
+            получишь на групповой проработке
+          </li>
+          <li class="you-results__item">
+            Ты начнешь реализовывать себя в жизни без страхов и негативных
+            убеждений
+          </li>
+          <li class="you-results__item">
+            Ты научишься зарабатывать на консультациях
+          </li>
+          <li class="you-results__item">
+            Ты будешь приятно удивлена, как поменяется мир вокруг тебя
+          </li>
+          <li class="you-results__item">
+            Ты научишься сканировать СИТУАЦИЮ, ЛЮДЕЙ и принимать идеальные
+            решения для себя
+          </li>
+          <li class="you-results__item">
+            Ты научишься прорабатывать свои глубинные убеждения и
+            трансформировать их на продвигающие
+          </li>
+          <li class="you-results__item">
+            Ты всегда будешь иметь энергию для достижения новых целей
+          </li>
+          <li class="you-results__item">
+            И если для тебя это важно, то сможешь выйти на новый финансовый
+            уровень
+          </li>
+          <li class="you-results__item">
+            Ты вычистишь свои программы из подсознания, которые тянут тебя вниз
+          </li>
+          <li class="you-results__item">
+            Ты научишся использовать возможности своего подсознания и раскроешь
+            свои новые способности
+          </li>
+          <li class="you-results__item">
+            Ты научишся осуществлять свои мечты и проявлять желаемое в жизни
+          </li>
+        </ul>
+      </section>
+      <section class="programme">
+        <h3 class="programme__text">Программа Групповой Работы</h3>
+        <div class="programme__column">
+          <div class="programme__name">Базовая программа</div>
+          <ul class="programme__list">
+            <li class="programme__list-item">
+              Что такое метод Thetahealing. История создания и развития метода.
+            </li>
+            <li class="programme__list-item">
+              Что такое нейропсихология. Основные понятия.
+            </li>
+            <li class="programme__list-item">
+              Как находить установки, страхи, обиды и обнаруживать самые
+              глубинные убеждения и блоки
+            </li>
+            <li class="programme__list-item">
+              Умение обнаруживать и изменять негативные убеждения на всех
+              уровнях (базовом, генетическом, историческом, уровне Души)
+            </li>
+            <li class="programme__list-item">
+              Формирование новых нейронных связей продвигающих убеждений и
+              установок, программы здоровья
+            </li>
+            <li class="programme__list-item">
+              Как находить причины многих заболеваний (психосоматика) и исцелять
+              болезни
+            </li>
+            <li class="programme__list-item">
+              Умение находить и слышать правильные ответы в любой ситуации
+            </li>
+            <li class="programme__list-item">
+              Защита своего пространства от воздействия негативной внешней
+              энергии
+            </li>
+            <li class="programme__list-item">
+              Восполнение своего уровень энергии
+            </li>
+            <li class="programme__list-item">
+              Манифестация в свою жизнь родственных душ и создание гармоничных
+              отношений (брак, бизнес, клиенты, друзья)
+            </li>
+          </ul>
+          <div class="programme__name">Продвинутая программа</div>
+          <ul class="programme__list">
+            <li class="programme__list-item">
+              Загрузка более 600 продвигающих установок и чувств, которые ведут
+              к счастью и гармонии во всех сферах жизни
+            </li>
+            <li class="programme__list-item">
+              Мгновенная проработка убеждений, блоков
+            </li>
+            <li class="programme__list-item">
+              Управление временем, техника "Сжимание и разжимание времени".
+            </li>
+            <li class="programme__list-item">
+              Эмоциональное освобождение от незавершенных отношений и связанных
+              с этим переживаний
+            </li>
+            <li class="programme__list-item">
+              Исцеление детских глубоких травм, страхов и болезней
+            </li>
+            <li class="programme__list-item">
+              Очищение сердце и всего тела от накопленного горя, несчастья за
+              всю жизнь
+            </li>
+            <li class="programme__list-item">
+              Нахождение уроков во всех ситуациях, которые происходят и
+              завершать их наилучшим образом
+            </li>
+          </ul>
+          <div class="programme__name">Глубинная программа</div>
+          <ul class="programme__list">
+            <li class="programme__list-item">
+              Научитесь видеть корневые убеждения
+            </li>
+            <li class="programme__list-item">Освоите мастерство раскопок</li>
+            <li class="programme__list-item">
+              Увеличите скорость проведения раскопок и их глубину
+            </li>
+            <li class="programme__list-item">
+              Освоите разные методы раскопок: страхов, обид, болезней,
+              манифестацию и другие
+            </li>
+            <li class="programme__list-item">
+              Будете знать четкий путь и стратегию проведения раскопок
+            </li>
+            <li class="programme__list-item">
+              Научитесь работать с "Невозможным"
+            </li>
+            <li class="programme__list-item">
+              Научитесь обходить ответ "Я не знаю"
+            </li>
+            <li class="programme__list-item">
+              Освоите правила глубинных раскопок
+            </li>
+            <li class="programme__list-item">
+              Разбор частых ошибок в раскопках
+            </li>
+          </ul>
+          <span class="programme__text">
+            Забронируй место в групповой проработке
+          </span>
+          <form class="programme__form" action="#">
+            <button class="programme__btn">Забронировать место</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"></footer> -->
+  </body>
 </html>
