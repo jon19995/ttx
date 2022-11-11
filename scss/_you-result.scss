@@ -1,0 +1,48 @@
+.you-result {
+  background: purple;
+  // .you-result__container
+
+  &__container {
+    max-width: 1110px;
+    width: 100%;
+    padding: 0px 15px;
+    margin: 0px auto;
+    min-height: 40px;
+    border: 1px solid red;
+  }
+
+  // .you-result__text
+
+  &__text {
+    font-size: 30px;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    font-style: italic;
+    align-items: center;
+  }
+
+  &__text-top {
+    color: rgb(62, 115, 212);
+    font-size: 75px;
+    margin-bottom: 7px;
+    margin-right: 300px;
+  }
+
+  &__text-bottom {
+    color: white;
+    margin-left: 40%;
+    font-size: 55px;
+  }
+
+  // .you-result__list
+
+  &__list {
+  }
+
+  // .you-result__list-item
+
+  &__list-item {
+  }
+}

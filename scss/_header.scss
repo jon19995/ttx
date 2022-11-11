@@ -16,7 +16,7 @@
 
   &__top {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
   }
 
   .header {
@@ -24,7 +24,7 @@
     }
 
     &__nav-list {
-      margin-top: 110px;
+      margin-top: 40px;
       display: flex;
       text-transform: uppercase;
     }
@@ -48,10 +48,10 @@
     text-align: center;
     margin-bottom: 30px;
     &-btn {
-      margin: 0px auto;
       font-size: 30px;
       width: 50%;
       text-align: center;
+      margin-bottom: 30px;
     }
   }
 
@@ -61,14 +61,20 @@
     margin-left: 30px;
     font-size: 22px;
     margin-top: 15px;
+    max-width: 50%;
     line-height: 40px;
   }
 
   // .header__list-item
 
   &__list-item {
+    font-style: italic;
+
     &::before {
       content: "-";
+    }
+    &:not(:last-child) {
+      margin-bottom: 15px;
     }
   }
 
@@ -78,15 +84,14 @@
     display: inline-block;
     margin-top: 20px;
     color: #454545;
-    font-size: 16px;
-    margin-left: 60%;
+    font-size: 24px;
     margin-bottom: 20px;
+    margin-left: 20px;
   }
 
   // .header__form
 
   &__form {
-    margin-left: 70%;
   }
 }
 .logo {
@@ -105,6 +110,8 @@
   }
 }
 .sign-up {
+  display: flex;
+  margin: 15px 0px 30px 95px;
   font-size: 16px;
   padding: 20px 10px;
   border-radius: 30px;
