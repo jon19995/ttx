@@ -1,0 +1,36 @@
+@import "_colors";
+@import "_fonts";
+@import "_btn";
+@import "_null";
+@import "./blocks/_promo";
+@import "./blocks/_for-block";
+@import "./blocks/_program";
+@import "./blocks/rates";
+@import "./blocks/_you-result";
+@import "./blocks/_what-to-do";
+@import "./blocks/_help";
+@import "./blocks/_session";
+@import "./blocks/_thanks";
+
+body {
+    color: rgb(250, 250, 250);
+    font-family: "futuraPt", Arial, sans-serif;
+    line-height: 1.1;
+}
+
+.container {
+    max-width: 1110px;
+    width: 100%;
+    padding: 0px 15px;
+    margin: 0px auto;
+}
+
+a:active,
+a:focus,
+a:visited,
+a {
+    color: white;
+}
+/* ------------------------------ */
+
+/* ------------------------------ */

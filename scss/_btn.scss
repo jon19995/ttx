@@ -1,0 +1,29 @@
+.btn {
+    padding: 20px 40px;
+    width: fit-content;
+    border-radius: 5px;
+    font-family: "futuraPtBold", Arial, sans-serif;
+    cursor: pointer;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: box-shadow 0.3s, border-color 0.3s;
+
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+            rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+            rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+
+    &__light {
+        background: radial-gradient($neon-color 0%, $blue-color 100%);
+        color: $dark-color;
+        border: 1px solid $blue-color;
+    }
+
+    &__transparent {
+        background: transparent;
+        border: 2px solid $blue-color;
+        color: $blue-color;
+        box-shadow: 5px 5px 15px 0px rgba(0, 240, 255, 0.4);
+    }
+}

@@ -1,0 +1,146 @@
+.program {
+    padding: 100px 0;
+
+    &__header {
+        h2 {
+            font-size: 70px;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            text-align: center;
+            transform: scaleY();
+            background-image: linear-gradient(
+                180deg,
+                rgba(0, 240, 255, 1) 0%,
+                rgba(4, 156, 207, 1) 100%
+            );
+        }
+    }
+
+    &__program-list {
+        display: flex;
+        color: $dark-color;
+        flex-direction: column;
+        font-size: 22px;
+        margin-top: 60px;
+
+        & > li.program__program-item {
+            &:first-of-type {
+                border-top: 1px solid $neon-color;
+                border-bottom: 1px solid $neon-color;
+            }
+
+            &:not(:first-of-type) {
+                border-bottom: 1px solid $neon-color;
+            }
+
+            > .checkbox__container {
+                position: relative;
+                display: block;
+                cursor: pointer;
+
+                & > .checkbox__title {
+                    text-transform: uppercase;
+                    width: 100%;
+                    padding: 27px 50px 27px 0;
+                }
+            }
+
+            input.checkbox {
+                position: absolute;
+                visibility: hidden;
+                opacity: 0;
+                z-index: -10;
+                max-width: 0;
+                max-height: 0;
+
+                & + label.checkbox__container {
+                    .checkbox__mark {
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        transform: translateY(-50%);
+                        height: 40px;
+                        width: 40px;
+                        border-radius: 50%;
+                        transition: all 0.4s;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            height: 70%;
+                            width: 2px;
+                            border-radius: 4px;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            background: $neon-color;
+                            transition: all 0.4s;
+                        }
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            height: 2px;
+                            width: 70%;
+                            border-radius: 4px;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            background: $neon-color;
+                            transition: all 0.4s;
+                        }
+                    }
+
+                    &:hover > .checkbox__mark {
+                        background: #eee;
+                    }
+                }
+
+                &:checked + label.checkbox__container > .checkbox__mark {
+                    transform: translateY(-50%) rotate(45deg);
+
+                    &::after,
+                    &::before {
+                        background: #bd00a4;
+                    }
+                }
+
+                & ~ .program__content {
+                    overflow: hidden;
+                    transition: max-height 0.3s;
+                    max-height: 0;
+                    padding-left: 20px;
+
+                    .program__content-item {
+                        list-style: disc;
+                        padding: 8px 0;
+                        font-weight: 300;
+                        font-family: "futuraPtLight", Arial, sans-serif;
+                    }
+                }
+
+                &:checked ~ .program__content {
+                    max-height: 300px;
+                    margin-bottom: 27px;
+                }
+            }
+        }
+    }
+
+    &__footer {
+        margin: 60px auto;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+
+        .descr {
+            font-size: 20px;
+            text-transform: uppercase;
+            color: $neon-color;
+        }
+    }
+}
