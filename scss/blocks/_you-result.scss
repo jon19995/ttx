@@ -1,0 +1,75 @@
+.you-result {
+    background-image: url(../assets/jpg/background.jpg);
+    background-position: center top;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 100px 0;
+
+    &__header {
+        text-transform: uppercase;
+        width: 80%;
+        margin: 0 auto;
+
+        h2 {
+            font-size: 70px;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            background-image: linear-gradient(
+                180deg,
+                rgba(0, 240, 255, 1) 0%,
+                rgba(4, 156, 207, 1) 100%
+            );
+        }
+
+        p {
+            font-size: 50px;
+            color: $white-color;
+            text-align: right;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        row-gap: 50px;
+
+        li {
+            width: 50%;
+            font-size: 18px;
+            color: $white-color;
+            text-transform: uppercase;
+
+            p {
+                padding-left: 60px;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 50px;
+                    width: 3px;
+                    left: 20px;
+                    top: calc(50% + -3px);
+                    background: $neon-color;
+                    transform: rotate(30deg) translateY(-50%);
+                    border-radius: 27% 73% 0% 100% / 96% 64% 36% 4%;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 30px;
+                    width: 3px;
+                    left: 11px;
+                    top: calc(50% + -4px);
+                    background: $neon-color;
+                    -webkit-transform: rotate(-30deg);
+                    transform: rotate(-45deg);
+                    border-radius: 27% 73% 0% 100% / 96% 64% 36% 4%;
+                }
+            }
+        }
+    }
+}

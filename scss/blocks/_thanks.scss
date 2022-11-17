@@ -1,0 +1,29 @@
+.thanks {
+    padding-bottom: 100px;
+
+    &__header {
+        text-transform: uppercase;
+        margin: 0 auto;
+
+        h2 {
+            font-size: 70px;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            font-weight: 700;
+            background-image: linear-gradient(
+                180deg,
+                rgba(0, 240, 255, 1) 0%,
+                rgba(4, 156, 207, 1) 100%
+            );
+        }
+    }
+
+    p {
+        margin-top: 60px;
+        font-size: 20px;
+        color: $dark-color;
+        text-align: center;
+        font-family: "futuraPtNormal", Arial, sans-serif;
+    }
+}

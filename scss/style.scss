@@ -1,22 +1,35 @@
-/* 
-&display=swap
-&subset=cyrillic-ext 
-*/
-@import url("https://fonts.googleapis.com/css?family=Roboto:regular,500,700,900&display=swap");
+@import "_colors";
+@import "_fonts";
+@import "_btn";
 @import "_null";
-@import "_header";
-@import "if-you";
-@import "you-result";
+@import "./blocks/_promo";
+@import "./blocks/_for-block";
+@import "./blocks/_program";
+@import "./blocks/rates";
+@import "./blocks/_you-result";
+@import "./blocks/_what-to-do";
+@import "./blocks/_help";
+@import "./blocks/_session";
+@import "./blocks/_thanks";
+
 body {
-  line-height: 1;
-  color: #fff;
-  background-color: palevioletred;
+    color: rgb(250, 250, 250);
+    font-family: "futuraPt", Arial, sans-serif;
+    line-height: 1.1;
 }
-.wrapper {
-  min-height: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+
+.container {
+    max-width: 1110px;
+    width: 100%;
+    padding: 0px 15px;
+    margin: 0px auto;
+}
+
+a:active,
+a:focus,
+a:visited,
+a {
+    color: white;
 }
 /* ------------------------------ */
 

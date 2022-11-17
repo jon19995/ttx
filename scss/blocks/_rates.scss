@@ -1,0 +1,163 @@
+.rates {
+    background-image: url(../assets/jpg/background.jpg);
+    background-position: center top;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 100px 0;
+
+    &__header {
+        text-transform: uppercase;
+        width: 680px;
+        margin: 0 auto;
+
+        h2 {
+            font-size: 70px;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            background-image: linear-gradient(
+                180deg,
+                rgba(0, 240, 255, 1) 0%,
+                rgba(4, 156, 207, 1) 100%
+            );
+        }
+
+        p {
+            font-size: 65px;
+            color: $white-color;
+            text-align: right;
+        }
+    }
+
+    &__list {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-auto-rows: auto;
+        gap: 40px;
+
+        &-item {
+            color: $dark-color;
+            position: relative;
+            z-index: 10;
+            font-family: "futuraPtNormal", Arial, sans-serif;
+
+            .desc {
+                border-radius: 10px;
+                padding: 20px;
+                background: $white-color;
+                border: 1px solid $neon-color;
+            }
+
+            &:not(:first-of-type)::before {
+                content: "";
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                bottom: 10px;
+                right: 10px;
+                z-index: -1;
+                background: linear-gradient(
+                    90deg,
+                    #03a9f4,
+                    #f441a5,
+                    #ffeb3b,
+                    #03a9f4
+                );
+                background-size: 400%;
+                height: calc(100% + 10px);
+                width: calc(100% + 10px);
+                filter: blur(40px);
+                transition: all 0.5s;
+                border-radius: 30%;
+                opacity: 0;
+            }
+
+            &:not(:first-of-type):hover {
+                z-index: 20;
+
+                &::before {
+                    opacity: 1;
+                    filter: blur(40px);
+                    top: -40px;
+                    left: -30px;
+                    bottom: -40px;
+                    right: -30px;
+                    height: calc(100% + 80px);
+                    width: calc(100% + 60px);
+                    animation: background 8s linear infinite;
+                }
+            }
+
+            header h2 {
+                font-size: 29px;
+                text-align: center;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 700;
+                background-image: linear-gradient(
+                    180deg,
+                    rgba(0, 240, 255, 1) 0%,
+                    rgba(4, 156, 207, 1) 100%
+                );
+            }
+
+            &_desc-list {
+                margin: 30px 0;
+                padding-left: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                li {
+                    font-size: 18px;
+                    list-style: disc;
+                }
+            }
+
+            .footer {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin: 20px 0;
+                align-items: center;
+
+                .cost {
+                    &__old {
+                        font-size: 20px;
+                        text-decoration: line-through;
+
+                        &_fz1 {
+                            font-size: 14px;
+                        }
+
+                        &_fz2 {
+                            font-size: 15px;
+                        }
+                    }
+
+                    &__new {
+                        font-weight: 700;
+                        font-size: 30px;
+                    }
+                }
+
+                .btn {
+                    margin-top: 20px;
+                    width: 100%;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes background {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}
