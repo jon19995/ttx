@@ -1,4 +1,7 @@
 .session {
+    background-image: url(../assets/jpg/background.jpg);
+    background-position: center top;
+    background-size: cover;
     padding: 100px 0;
 
     &__header {
@@ -22,7 +25,6 @@
     }
 
     &__descr p {
-        color: $dark-color;
         font-size: 24px;
         padding: 0 60px;
         font-family: "futuraPtNormal", Arial, sans-serif;
@@ -37,4 +39,32 @@
         justify-content: center;
         margin-top: 70px;
     }
+}
+
+@media screen and (max-width: 980px) {
+    .session__header h2 {
+        font-size: 60px;
+    }
+
+    .session__descr p {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .session__header {
+        margin-bottom: 20px;
+
+        h2 {
+            font-size: 40px;
+        }
+    }
+
+    .session__descr p {
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 660px) {
 }

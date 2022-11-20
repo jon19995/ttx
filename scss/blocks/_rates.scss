@@ -8,6 +8,7 @@
     &__header {
         text-transform: uppercase;
         width: 680px;
+        max-width: 100%;
         margin: 0 auto;
 
         h2 {
@@ -49,7 +50,7 @@
                 border: 1px solid $neon-color;
             }
 
-            &:not(:first-of-type)::before {
+            &_hight-light::before {
                 content: "";
                 position: absolute;
                 top: 10px;
@@ -73,7 +74,7 @@
                 opacity: 0;
             }
 
-            &:not(:first-of-type):hover {
+            &_hight-light:hover {
                 z-index: 20;
 
                 &::before {
@@ -159,5 +160,34 @@
     }
     100% {
         background-position: 400%;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .rates__header {
+        h2 {
+            font-size: 60px;
+        }
+        p {
+            font-size: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .rates__header {
+        h2 {
+            font-size: 50px;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            font-size: 40px;
+        }
+    }
+
+    .rates__list {
+        margin-top: 20px;
     }
 }
