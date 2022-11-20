@@ -909,6 +909,7 @@ html {
 
   .session__descr p {
     font-size: 18px;
+    padding: 0;
     text-align: center; } }
 .thanks {
   background-image: url(../assets/jpg/background.jpg);
