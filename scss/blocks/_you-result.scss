@@ -99,8 +99,12 @@
         }
     }
 
-    .you-result__list li {
-        font-size: 16px;
+    .you-result__list {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+
+        li {
+            font-size: 16px;
+        }
     }
 }
 

@@ -672,8 +672,10 @@ html {
   .you-result__header p {
     font-size: 40px; }
 
-  .you-result__list li {
-    font-size: 16px; } }
+  .you-result__list {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+    .you-result__list li {
+      font-size: 16px; } }
 @media screen and (max-width: 660px) {
   .you-result__header h2 {
     font-size: 40px;
