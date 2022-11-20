@@ -37,6 +37,10 @@ p {
     overflow-wrap: break-word;
 }
 
+section {
+    overflow: hidden;
+}
+
 a:active,
 a:focus,
 a:visited,
