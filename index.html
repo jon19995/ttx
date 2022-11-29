@@ -23,10 +23,10 @@
                     <nav>
                         <ul class="header__nav">
                             <li>
-                                <a href="#">Тарифы</a>
+                                <a href="#rates">Тарифы</a>
                             </li>
                             <li>
-                                <a href="#">Контакты</a>
+                                <a href="#contacts">Контакты</a>
                             </li>
                         </ul>
                     </nav>
@@ -60,7 +60,10 @@
                     <span class="footer__descr"
                         >Записаться безоплатную диагностику</span
                     >
-                    <button class="btn btn__light">
+                    <button
+                        class="btn btn__light"
+                        data-modal="modal-diagnostic"
+                    >
                         Записатьсся на диагностику
                     </button>
                 </footer>
@@ -116,7 +119,11 @@
                 </main>
                 <footer class="for-block__footer">
                     <button class="btn btn__light">ДА, Я ХОЧУ</button>
-                    <button class="btn btn__transparent">Выбрать тариф</button>
+                    <a href="#rates">
+                        <button class="btn btn__transparent">
+                            Выбрать тариф
+                        </button>
+                    </a>
                 </footer>
             </section>
         </div>
@@ -364,7 +371,9 @@
                     <h2 class="descr">
                         Забронируй место в групповой проработке
                     </h2>
-                    <button class="btn btn__light">Забронировать место</button>
+                    <button data-modal="modal-booking" class="btn btn__light">
+                        Забронировать место
+                    </button>
                 </footer>
             </div>
         </section>
@@ -373,7 +382,7 @@
             <div class="container">
                 <header class="rates__header">
                     <h2>форматы</h2>
-                    <p>участия</p>
+                    <p id="rates">участия</p>
                 </header>
                 <ul class="rates__list">
                     <li class="rates__list-item rates__list-item_hight-light">
@@ -566,7 +575,7 @@
                     </p>
                 </main>
                 <footer class="session__footer">
-                    <button class="btn btn__light">
+                    <button class="btn btn__light" data-modal="modal-tSession">
                         Записаться на Тета Сессию
                     </button>
                 </footer>
@@ -593,7 +602,7 @@
                                 required
                                 value=""
                                 onchange="this.setAttribute('value', this.value);"
-                            /><span>ФИО</span>
+                            /><span>Имя Фамилия</span>
                         </div>
                         <div>
                             <input
@@ -662,7 +671,7 @@
 
         <footer class="page-footer">
             <div class="container">
-                <p class="footer__contacts">Контакты</p>
+                <p class="footer__contacts" id="contacts">Контакты</p>
                 <div class="number-and-mail">
                     <a class="footer__number" href="tel:+79511182828"
                         >+7 951 118 28 28</a
@@ -704,5 +713,206 @@
                 </a>
             </div>
         </footer>
+
+        <div class="modal__wrapper" id="modal-tSession">
+            <div class="modal__content diagnostic" id="modal-content">
+                <h1 class="title">
+                    ЗАПОЛНИТЕ ЗАЯВКУ,<br />
+                    ЧТОБЫ БЫТЬ В ЧИСЛЕ ПЕРВЫХ
+                </h1>
+                <p class="sub-title">
+                    менеджер свяжется с вами в ближайшее время
+                </p>
+                <form class="form" action="#">
+                    <div>
+                        <input
+                            class="form__input form__input_text"
+                            type="text"
+                            name="FIO"
+                            required
+                            value=""
+                            onchange="this.setAttribute('value', this.value);"
+                        /><span>ФИО</span>
+                    </div>
+                    <div>
+                        <input
+                            class="form__input form__input_number"
+                            type="number"
+                            name="number"
+                            required
+                            value=""
+                            oninput="this.setAttribute('value', this.value);"
+                        /><span>+7 (999) 999-99-99</span>
+                    </div>
+                    <div>
+                        <input
+                            class="form__input form__input_mail"
+                            type="email"
+                            name="email"
+                            required
+                            value=""
+                            onchange="this.setAttribute('value', this.value);"
+                        />
+                        <span>Email</span>
+                    </div>
+                    <div>
+                        <input
+                            class="form__input form__input_text"
+                            type="text"
+                            name="city"
+                            required
+                            value=""
+                            onchange="this.setAttribute('value', this.value);"
+                        /><span>Ваш город</span>
+                    </div>
+                    <button
+                        class="btn btn__light btn__submit"
+                        data-message="Записаться на тета-сессию"
+                        type="submit"
+                    >
+                        Забронировать место
+                    </button>
+                </form>
+
+                <a class="private" href="./privacy_policy.docx" download>
+                    <p>Политика конфиденциальности</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="modal__wrapper" id="modal-diagnostic">
+            <div class="modal__content diagnostic" id="modal-content">
+                <h1 class="title">
+                    ЗАПОЛНИТЕ ЗАЯВКУ,<br />
+                    ЧТОБЫ БЫТЬ В ЧИСЛЕ ПЕРВЫХ
+                </h1>
+                <p class="sub-title">
+                    менеджер свяжется с вами в ближайшее время
+                </p>
+                <form class="form" action="#">
+                    <div>
+                        <input
+                            class="form__input form__input_text"
+                            type="text"
+                            name="FIO"
+                            required
+                            value=""
+                            onchange="this.setAttribute('value', this.value);"
+                        /><span>ФИО</span>
+                    </div>
+                    <div>
+                        <input
+                            class="form__input form__input_number"
+                            type="number"
+                            name="number"
+                            required
+                            value=""
+                            oninput="this.setAttribute('value', this.value);"
+                        /><span>+7 (999) 999-99-99</span>
+                    </div>
+                    <div>
+                        <input
+                            class="form__input form__input_mail"
+                            type="email"
+                            name="email"
+                            required
+                            value=""
+                            onchange="this.setAttribute('value', this.value);"
+                        />
+                        <span>Email</span>
+                    </div>
+                    <div>
+                        <input
+                            class="form__input form__input_text"
+                            type="text"
+                            name="city"
+                            required
+                            value=""
+                            onchange="this.setAttribute('value', this.value);"
+                        /><span>Ваш город</span>
+                    </div>
+                    <button
+                        class="btn btn__light btn__submit"
+                        data-message="Записаться на диагностику"
+                        type="submit"
+                    >
+                        Забронировать место
+                    </button>
+                </form>
+
+                <a class="private" href="./privacy_policy.docx" download>
+                    <p>Политика конфиденциальности</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="modal__wrapper" id="modal-booking">
+            <div class="modal__content diagnostic" id="modal-content">
+                <h1 class="title">
+                    ЗАПОЛНИТЕ ЗАЯВКУ,<br />
+                    ЧТОБЫ БЫТЬ В ЧИСЛЕ ПЕРВЫХ
+                </h1>
+                <p class="sub-title">
+                    менеджер свяжется с вами в ближайшее время
+                </p>
+                <form class="form" action="#">
+                    <div>
+                        <input
+                            class="form__input form__input_text"
+                            type="text"
+                            name="FIO"
+                            required
+                            value=""
+                            onchange="this.setAttribute('value', this.value);"
+                        /><span>ФИО</span>
+                    </div>
+                    <div>
+                        <input
+                            class="form__input form__input_number"
+                            type="number"
+                            name="number"
+                            required
+                            value=""
+                            oninput="this.setAttribute('value', this.value);"
+                        /><span>+7 (999) 999-99-99</span>
+                    </div>
+                    <div>
+                        <input
+                            class="form__input form__input_mail"
+                            type="email"
+                            name="email"
+                            required
+                            value=""
+                            onchange="this.setAttribute('value', this.value);"
+                        />
+                        <span>Email</span>
+                    </div>
+                    <div>
+                        <input
+                            class="form__input form__input_text"
+                            type="text"
+                            name="city"
+                            required
+                            value=""
+                            onchange="this.setAttribute('value', this.value);"
+                        /><span>Ваш город</span>
+                    </div>
+                    <button
+                        class="btn btn__light btn__submit"
+                        data-message="Забронировать место"
+                        type="submit"
+                    >
+                        Забронировать место
+                    </button>
+                </form>
+
+                <a href="./privacy_policy.docx" download>
+                    <p>Политика конфиденциальности</p>
+                </a>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>
