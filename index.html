@@ -593,13 +593,14 @@
                         заявку, с вами свяжется менеджер и поможет с любым
                         вопросом, заботливо проведя по всем шагам
                     </p>
-                    <form class="help__form">
+                    <form action="#" clas="help__form">
                         <div>
                             <input
                                 class="form__input form__input_text"
                                 type="text"
                                 required
                                 value=""
+                                name="FIO"
                                 onchange="this.setAttribute('value', this.value);"
                             /><span>Имя Фамилия</span>
                         </div>
@@ -608,7 +609,8 @@
                                 class="form__input form__input_mail"
                                 type="email"
                                 required
-                                value=""
+                                value="email"
+                                name=""
                                 onchange="this.setAttribute('value', this.value);"
                             />
                             <span>Email</span>
@@ -618,6 +620,7 @@
                                 class="form__input form__input_number"
                                 type="number"
                                 required
+                                name="phone"
                                 value=""
                                 oninput="this.setAttribute('value', this.value);"
                             /><span>+7 (999) 999-99-99</span>
@@ -779,7 +782,7 @@
             </div>
         </div>
 
-        <div class="modal__wrapper" id="modal-diagnostic">
+        <div action="#" class="modal__wrapper" id="modal-diagnostic">
             <div class="modal__content diagnostic" id="modal-content">
                 <h1 class="title">
                     ЗАПОЛНИТЕ ЗАЯВКУ,<br />
@@ -803,7 +806,7 @@
                         <input
                             class="form__input form__input_number"
                             type="number"
-                            name="number"
+                            name="phone"
                             required
                             value=""
                             oninput="this.setAttribute('value', this.value);"
@@ -869,7 +872,7 @@
                         <input
                             class="form__input form__input_number"
                             type="number"
-                            name="number"
+                            name="phone"
                             required
                             value=""
                             oninput="this.setAttribute('value', this.value);"

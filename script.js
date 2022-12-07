@@ -49,27 +49,27 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // Submit модалки:
     function submitModal(modal) {
-        modal.addEventListener("submit", async (e) => {
+        const form = modal.querySelector("form")
+        
+        form.addEventListener("submit", (e) => {
             e.preventDefault();
             const message = e.target
                 .querySelector("button[type='submit']")
                 .getAttribute("data-message");
-
+            
             $.ajax({
-                type: "POST",
+                type: "post",
                 url: "mailer/smart.php",
-                data: $(this).serialize(),
-            }).done(function () {
-                $(this).find("input").val("");
-                $("#consultation, #order").fadeOut();
-                $(".overlay, #mini").fadeIn("slow");
+                data: $(form).serialize(),
+            }).done(function (e) {
+                console.log('finish: ', e);
+                $(form).find("input").val("");
+                $(form).trigger("reset");
 
-                $("form").trigger("reset");
+                modal.style.display = "none";
             });
             return false;
         });
-
-        // password - efbrxcxjkypovshq
     }
 
     // Работа с модальными окнами
