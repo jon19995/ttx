@@ -4,6 +4,7 @@
     background-size: cover;
     min-height: 100vh;
     padding-top: 100px;
+    clip-path: polygon(0 60px, 100% 0%, 100% calc(100% - 60px), 0 100%);
 
     &__header {
         text-transform: uppercase;
@@ -109,19 +110,21 @@
 }
 
 @media screen and (max-width: 660px) {
-    .you-result__header {
-        h2 {
-            font-size: 40px;
-            text-align: center;
-        }
+    .you-result {        
+        &__header {
+            h2 {
+                font-size: 40px;
+                text-align: center;
+            }
 
-        p {
-            font-size: 35px;
-            text-align: center;
-        }
+            p {
+                font-size: 35px;
+                text-align: center;
+            }
 
-        .you-result__list li {
-            font-size: 14px;
+            .you-result__list li {
+                font-size: 14px;
+            }
         }
     }
 }

@@ -62,7 +62,7 @@
                     >
                     <button
                         class="btn btn__light"
-                        data-modal="modal-diagnostic"
+                        data-modal-title="Тета-Хилинг (С первого блока)"
                     >
                         Записаться на диагностику
                     </button>
@@ -371,7 +371,7 @@
                     <h2 class="descr">
                         Забронируй место в групповой проработке
                     </h2>
-                    <button data-modal="modal-booking" class="btn btn__light">
+                    <button data-modal-title="Программа Групповой Работы" class="btn btn__light">
                         Забронировать место
                     </button>
                 </footer>
@@ -574,7 +574,7 @@
                     </p>
                 </main>
                 <footer class="session__footer">
-                    <button class="btn btn__light" data-modal="modal-tSession">
+                    <button class="btn btn__light" data-modal-title="Индивидуальная Тета Сессия">
                         Записаться на Тета Сессию
                     </button>
                 </footer>
@@ -716,7 +716,7 @@
             </div>
         </footer>
 
-        <div class="modal__wrapper" id="modal-tSession">
+        <div class="modal__wrapper" id="modal-entry">
             <div class="modal__content diagnostic" id="modal-content">
                 <h1 class="title">
                     ЗАПОЛНИТЕ ЗАЯВКУ,<br />
@@ -782,135 +782,22 @@
             </div>
         </div>
 
-        <div action="#" class="modal__wrapper" id="modal-diagnostic">
+        <div class="modal__wrapper" id="done">
             <div class="modal__content diagnostic" id="modal-content">
                 <h1 class="title">
-                    ЗАПОЛНИТЕ ЗАЯВКУ,<br />
-                    ЧТОБЫ БЫТЬ В ЧИСЛЕ ПЕРВЫХ
+                    ДАННЫЕ ОТПРАВЛЕНЫ
                 </h1>
                 <p class="sub-title">
                     менеджер свяжется с вами в ближайшее время
                 </p>
-                <form class="form" action="#">
-                    <div>
-                        <input
-                            class="form__input form__input_text"
-                            type="text"
-                            name="FIO"
-                            required
-                            value=""
-                            onchange="this.setAttribute('value', this.value);"
-                        /><span>ФИО</span>
-                    </div>
-                    <div>
-                        <input
-                            class="form__input form__input_number"
-                            type="number"
-                            name="phone"
-                            required
-                            value=""
-                            oninput="this.setAttribute('value', this.value);"
-                        /><span>+7 (999) 999-99-99</span>
-                    </div>
-                    <div>
-                        <input
-                            class="form__input form__input_mail"
-                            type="email"
-                            name="email"
-                            required
-                            value=""
-                            onchange="this.setAttribute('value', this.value);"
-                        />
-                        <span>Email</span>
-                    </div>
-                    <div>
-                        <input
-                            class="form__input form__input_text"
-                            type="text"
-                            name="city"
-                            required
-                            value=""
-                            onchange="this.setAttribute('value', this.value);"
-                        /><span>Ваш город</span>
-                    </div>
-                    <button
-                        class="btn btn__light btn__submit"
-                        data-message="Записаться на диагностику"
-                        type="submit"
-                    >
-                        Забронировать место
-                    </button>
-                </form>
-
-                <a class="private" href="./privacy_policy.docx" download>
-                    <p>Политика конфиденциальности</p>
-                </a>
             </div>
         </div>
 
-        <div class="modal__wrapper" id="modal-booking">
+        <div class="modal__wrapper" id="loading">
             <div class="modal__content diagnostic" id="modal-content">
                 <h1 class="title">
-                    ЗАПОЛНИТЕ ЗАЯВКУ,<br />
-                    ЧТОБЫ БЫТЬ В ЧИСЛЕ ПЕРВЫХ
+                    Отправка...
                 </h1>
-                <p class="sub-title">
-                    менеджер свяжется с вами в ближайшее время
-                </p>
-                <form class="form" action="#">
-                    <div>
-                        <input
-                            class="form__input form__input_text"
-                            type="text"
-                            name="FIO"
-                            required
-                            value=""
-                            onchange="this.setAttribute('value', this.value);"
-                        /><span>ФИО</span>
-                    </div>
-                    <div>
-                        <input
-                            class="form__input form__input_number"
-                            type="number"
-                            name="phone"
-                            required
-                            value=""
-                            oninput="this.setAttribute('value', this.value);"
-                        /><span>+7 (999) 999-99-99</span>
-                    </div>
-                    <div>
-                        <input
-                            class="form__input form__input_mail"
-                            type="email"
-                            name="email"
-                            required
-                            value=""
-                            onchange="this.setAttribute('value', this.value);"
-                        />
-                        <span>Email</span>
-                    </div>
-                    <div>
-                        <input
-                            class="form__input form__input_text"
-                            type="text"
-                            name="city"
-                            required
-                            value=""
-                            onchange="this.setAttribute('value', this.value);"
-                        /><span>Ваш город</span>
-                    </div>
-                    <button
-                        class="btn btn__light btn__submit"
-                        data-message="Забронировать место"
-                        type="submit"
-                    >
-                        Забронировать место
-                    </button>
-                </form>
-
-                <a href="./privacy_policy.docx" download>
-                    <p>Политика конфиденциальности</p>
-                </a>
             </div>
         </div>
 

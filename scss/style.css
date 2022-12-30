@@ -96,7 +96,9 @@ html {
   background-position: center top;
   background-size: cover;
   min-height: 100vh;
-  padding: 50px 0 100px 0; }
+  padding: 50px 0 100px 0;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 60px), 0 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 60px), 0 100%); }
   .promo .header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -237,7 +239,7 @@ html {
   .promo .footer__descr {
     font-size: 16px; } }
 .for-block {
-  padding: 100px 0; }
+  padding: 40px 0; }
   .for-block__header {
     text-transform: uppercase;
     width: 950px;
@@ -310,7 +312,7 @@ html {
         -ms-flex-align: center;
             align-items: center; } }
 .program {
-  padding: 100px 0; }
+  padding: 40px 0; }
   .program__header h2 {
     font-size: 70px;
     -webkit-background-clip: text;
@@ -458,7 +460,10 @@ html {
   background-position: center top;
   background-size: cover;
   min-height: 100vh;
-  padding: 100px 0; }
+  padding: 140px 0;
+  overflow: hidden;
+  -webkit-clip-path: polygon(0 60px, 100% 0%, 100% calc(100% - 60px), 0 100%);
+          clip-path: polygon(0 60px, 100% 0%, 100% calc(100% - 60px), 0 100%); }
   .rates__header {
     text-transform: uppercase;
     width: 680px;
@@ -606,7 +611,9 @@ html {
   background-position: center top;
   background-size: cover;
   min-height: 100vh;
-  padding-top: 100px; }
+  padding-top: 100px;
+  -webkit-clip-path: polygon(0 60px, 100% 0%, 100% calc(100% - 60px), 0 100%);
+          clip-path: polygon(0 60px, 100% 0%, 100% calc(100% - 60px), 0 100%); }
   .you-result__header {
     text-transform: uppercase;
     width: 80%;
@@ -687,7 +694,7 @@ html {
     font-size: 14px; } }
 .to-do {
   min-height: 100vh;
-  padding: 100px 0; }
+  padding: 40px 0; }
   .to-do__header {
     text-transform: uppercase;
     text-align: center;
@@ -868,7 +875,9 @@ form {
   background-image: url(../assets/jpg/background.jpg);
   background-position: center top;
   background-size: cover;
-  padding: 100px 0; }
+  padding: 100px 0;
+  -webkit-clip-path: polygon(0 60px, 100% 0%, 100% calc(100% - 60px), 0 100%);
+          clip-path: polygon(0 60px, 100% 0%, 100% calc(100% - 60px), 0 100%); }
   .session__header {
     text-transform: uppercase;
     margin: 0 auto;
@@ -916,7 +925,9 @@ form {
   background-image: url(../assets/jpg/background.jpg);
   background-position: center top;
   background-size: cover;
-  padding: 100px 0; }
+  padding: 100px 0;
+  -webkit-clip-path: polygon(0 60px, 100% 0%, 100% calc(100% - 60px), 0 100%);
+          clip-path: polygon(0 60px, 100% 0%, 100% calc(100% - 60px), 0 100%); }
   .thanks__header {
     text-transform: uppercase;
     margin: 0 auto; }
@@ -1106,6 +1117,20 @@ form {
     margin-top: 20px;
     text-align: center; }
 
+@media screen and (max-width: 900px) {
+  .modal__content {
+    max-width: 100%; } }
+@media screen and (max-width: 600px) {
+  .modal__content {
+    max-width: calc( 100% - 20px); }
+    .modal__content .title {
+      font-size: 26px; }
+    .modal__content .sub-title {
+      font-size: 20px; }
+    .modal__content .form > div {
+      width: 100%; }
+    .modal__content .form button {
+      width: 100%; } }
 body {
   color: #fafafa;
   font-family: "futuraPt", Arial, sans-serif;
@@ -1125,9 +1150,6 @@ h5,
 h6,
 p {
   overflow-wrap: break-word; }
-
-section {
-  overflow: hidden; }
 
 a:active,
 a:focus,

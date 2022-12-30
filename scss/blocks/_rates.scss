@@ -3,7 +3,9 @@
     background-position: center top;
     background-size: cover;
     min-height: 100vh;
-    padding: 100px 0;
+    padding: 140px 0;
+    overflow: hidden;
+    clip-path: polygon(0 60px, 100% 0%, 100% calc(100% - 60px), 0 100%);
 
     &__header {
         text-transform: uppercase;

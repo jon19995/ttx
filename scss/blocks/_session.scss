@@ -3,6 +3,7 @@
     background-position: center top;
     background-size: cover;
     padding: 100px 0;
+    clip-path: polygon(0 60px, 100% 0%, 100% calc(100% - 60px), 0 100%);
 
     &__header {
         text-transform: uppercase;
@@ -67,5 +68,3 @@
     }
 }
 
-@media screen and (max-width: 660px) {
-}
